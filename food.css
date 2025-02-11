@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light background for contrast */
+    background: linear-gradient(135deg, #f0f4c3, #b2ebf2);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Dark background for contrast */
+    color: #fff;
+}
+
+.logo img {
+    height: 50px; /* Set logo height */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Change display to flex for better alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Position relative for the underline effect */
+}
+
+nav ul li a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold; /* Make navbar items bold */
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px;
+    width: 0; /* Start with no width */
+    background-color: #FFC107; /* Underline color */
+    transition: width 0.3s ease; /* Animate width on hover */
+}
+
+nav ul li a:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline width to full on hover */
+}
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.food-image {
+    width: 100%; /* Responsive image */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.hover-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text-content {
+    flex: 2;
+    padding: 0 20px; /* Space between text and images */
+}
+
+.text-content h1 {
+    color: #333; /* Dark text for readability */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.validator-logos img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --fa-animation-delay: 0s; /* Default animation delay */
+    --fa-rotate-angle: 0deg;   /* Default rotate angle */
+}
+
+.fa-beat {
+    animation-delay: var(--fa-animation-delay, 0s);
+}
+
+.fa-flip {
+    transform: rotate(var(--fa-rotate-angle, 0deg));
+}

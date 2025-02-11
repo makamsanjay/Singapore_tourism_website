@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4CAF50;
+    padding: 10px 20px;
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Change display to flex for better alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Position relative for the underline effect */
+}
+
+nav ul li a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold; /* Make navbar items bold */
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px;
+    width: 0; /* Start with no width */
+    background-color: #FFC107; /* Underline color */
+    transition: width 0.3s ease; /* Animate width on hover */
+}
+
+nav ul li a:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline width to full on hover */
+}
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.adjust-size {
+    height: 200px; 
+    width: 200px;  
+    object-fit: contain; 
+    border: 1px solid #333;
+}
+
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+th, td {
+    padding: 12px;
+    text-align: left; 
+    border: 2px solid #333; }
+
+th {
+    background-color: #00796b; 
+    color: white; 
+}
+
+tr:hover {
+    background-color: #f1f1f1; 
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.validator-logos img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

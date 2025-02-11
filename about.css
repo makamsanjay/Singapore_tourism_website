@@ -1,0 +1,139 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradient background */
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4CAF50;
+    padding: 10px 20px;
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Change display to flex for better alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Position relative for the underline effect */
+}
+
+nav ul li a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold; /* Make navbar items bold */
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px;
+    width: 0; /* Start with no width */
+    background-color: #FFC107; /* Underline color */
+    transition: width 0.3s ease; /* Animate width on hover */
+}
+
+nav ul li a:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline width to full on hover */
+}
+
+/* About Container Styles */
+.about-container {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo {
+    flex: 1;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h1 {
+    color: #00796b; /* Dark teal */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Darker grey for text */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.validator-logos img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+:root {
+    --fa-animation-delay: 0s; /* Default animation delay */
+    --fa-rotate-angle: 0deg;   /* Default rotate angle */
+}
+
+.fa-beat {
+    animation-delay: var(--fa-animation-delay, 0s);
+}
+
+.fa-flip {
+    transform: rotate(var(--fa-rotate-angle, 0deg));
+}
+
+

@@ -1,0 +1,143 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    background: linear-gradient(135deg, #f0f4c3, #b2ebf2);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50; /* Dark background */
+    padding: 10px 20px; /* Add padding for space */
+}
+
+.logo img {
+    height: 50px; /* Set logo height */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+nav a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+    position: relative; /* For the underline effect */
+}
+
+nav a.active,
+nav a:hover {
+    color: yellow; /* Change text color on hover */
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fff; /* Underline color */
+    width: 0;
+    transition: width 0.3s; /* Animation for underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline */
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+/* Main content styles */
+.main-content {
+    display: flex;
+    margin: 20px; /* Add margin for spacing */
+    align-items: center; /* Center vertically */
+}
+
+.image-left {
+    flex: 1; /* Allow image container to grow */
+    margin-right: 20px; /* Add space between text and image */
+}
+
+.image-left img {
+    width: 100%; /* Responsive image */
+    max-width: 400px; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Round the corners */
+}
+
+.text-right {
+    flex: 2; /* Text takes more space */
+}
+
+/* Carousel styles */
+.carousel-container {
+    margin: 20px; /* Add margin for spacing */
+    text-align: center; /* Center the gallery title */
+}
+
+.carousel {
+    display: flex; /* Flex display for carousel images */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px; /* Padding around the carousel */
+}
+
+.carousel-img {
+    max-width: 250px; /* Set maximum width for carousel images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Spacing between images */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.validator-logos img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --fa-animation-delay: 0s; /* Default animation delay */
+    --fa-rotate-angle: 0deg;   /* Default rotate angle */
+}
+
+.fa-beat {
+    animation-delay: var(--fa-animation-delay, 0s);
+}
+
+.fa-flip {
+    transform: rotate(var(--fa-rotate-angle, 0deg));
+}
+

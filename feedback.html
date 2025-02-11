@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite City Form - Singapore</title>
+    <link rel="stylesheet" href="feedback.css"> 
+    <script src=".js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assests/singapore_logo.gif" alt="Site Logo"></a>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="history.html">History</a></li>
+                <li><a href="tourist.html">Tourism</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Please tell us about your visit to <span class="singapore">Singapore</span></h1>
+        <hr/>
+
+        <form action="feedback.php" method="POST" onsubmit="return validateDate()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <fieldset>
+                <legend>Favorite place in Singapore on your visit:</legend>
+                <input type="radio" id="marina_bay_sands" name="landmark" value="Marina Bay Sands" required>
+                <label for="marina_bay_sands">Marina Bay Sands</label><br>
+                <input type="radio" id="gardens_by_the_bay" name="landmark" value="Gardens by the Bay">
+                <label for="gardens_by_the_bay">Gardens by the Bay</label><br>
+                <input type="radio" id="sentosa" name="landmark" value="Sentosa">
+                <label for="sentosa">Sentosa</label><br>
+                <input type="radio" id="changi_airport" name="landmark" value="Changi Airport">
+                <label for="changi_airport">Changi Airport</label><br>
+                <input type="radio" id="little_india" name="landmark" value="Little India">
+                <label for="little_india">Little India</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Places You Visited:</legend>
+                <input type="checkbox" id="little_india" name="places[]" value="Little India">
+                <label for="little_india">Little India</label><br>
+                <input type="checkbox" id="sentosa_beach" name="places[]" value="Sentosa Beach">
+                <label for="sentosa_beach">Sentosa Island</label><br>
+                <input type="checkbox" id="universal_studios" name="places[]" value="Universal Studios">
+                <label for="universal_studios">Universal Studios</label><br>
+                <input type="checkbox" id="gardens_by_the_bay" name="places[]" value="Gardens By The Bay">
+                <label for="gardens_by_the_bay">Gardens by the Bay</label><br>
+                <input type="checkbox" id="changi_airport" name="places[]" value="Changi Airport">
+                <label for="changi_airport">Changi Airport</label>
+            </fieldset>
+
+            <label for="num_people">Number of People Visited:</label>
+            <input type="number" id="num_people" name="num_people" min="1" required>
+
+            <label for="visit_date">Date of Visit (should not be future date):</label>
+            <input type="date" id="visit_date" name="visit_date" max="<?= date('Y-m-d'); ?>" required>
+
+            <label for="rating">How much do you like Singapore?</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" value="5">
+
+            <label for="travel_mode">Your Mode of Travel:</label>
+            <select id="travel_mode" name="travel_mode" required>
+                <option value="">--Select--</option>
+                <option value="Airplane">Airplane</option>
+                <option value="Train">Train</option>
+                <option value="Bus">Bus</option>
+                <option value="Car">Car</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+<footer>
+    <div class="validator-logos">
+        <a href="https://validator.w3.org/nu/?doc=https://people.rit.edu/sm7046/individual%2520project/index.html"><img src="assests/html_logo.png" alt="HTML Validator Logo"></a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://people.rit.edu/sm7046/individual%2520project/&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors"><img src="assests/css_logo.png" alt="CSS Validator Logo"></a>
+    </div>
+    <div class="footer-links">
+        <a href="about.html">About Me</a>
+        <a href="reference.html">References</a>
+        <a href="grading.html">Grading</a>
+        <p>&copy; 2024 Sanjay. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>
+
+<script>
+    function validateDate() {
+        const visitDate = document.getElementById('visit_date').value;
+        const today = new Date().toISOString().split('T')[0];
+
+        if (visitDate > today) {
+            alert("Error: You cannot select a future date!");
+            return false;
+        }
+        return true;
+    }
+</script>

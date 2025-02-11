@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Singapore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assests/singapore_logo.gif" alt="Site Logo"></a>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="history.html">History</a></li>
+                <li><a href="tourist.html">Tourism</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <div class="content-container">
+            <div class="image-container">
+                <img src="assests/singapore_map.jpg" alt="Map of Singapore">
+            </div>
+            <div class="text-container">
+                <h1>Welcome to Singapore</h1>
+                <p>Singapore is a global metropolis that blends culture, cuisine, arts, and architecture. Known for its towering skyline, vibrant food scene, and lush green spaces, Singapore stands out as one of the world’s most futuristic cities.</p>
+                <p>It’s a hub for international business, a gateway to Southeast Asia, and home to diverse attractions like Marina Bay Sands, Gardens by the Bay, and Sentosa Island. With a rich history and a forward-looking spirit, Singapore truly offers something for everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-development">
+        <div class="text-container">
+            <h2>Technology and Development</h2>
+            <p>Singapore is renowned for its cutting-edge technology and innovation. The government actively promotes tech startups and invests in research and development, making it a regional tech hub. With initiatives like Smart Nation, Singapore leverages data and technology to enhance urban living and economic growth.</p>
+        </div>
+        <div class="image-container">
+            <img src="assests/tech.jpg" alt="Technology Development in Singapore">
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="assests/singapore_image1.jpg" alt="Gallery Image 1">
+                <img src="assests/singapore_image2.jpeg" alt="Gallery Image 2">
+                <img src="assests/image3.avif" alt="Gallery Image 3">
+                <img src="assests/image4.jpeg" alt="Gallery Image 4">
+                <img src="assests/image5.jpg" alt="Gallery Image 5">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="validator-logos">
+            <a href="https://validator.w3.org/nu/?doc=https://people.rit.edu/sm7046/individual%2520project/index.html"><img src="assests/html_logo.png" alt="HTML Validator Logo"></a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://people.rit.edu/sm7046/individual%2520project/&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors"><img src="assests/css_logo.png" alt="CSS Validator Logo"></a>
+        </div>
+        <div class="footer-links">
+            <a href="about.html">About Me</a>
+            <a href="reference.html">References</a>
+            <a href="grading.html">Grading</a>
+            <p>&copy; 2024 Sanjay. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = carouselImages.children;
+        let index = 0;
+
+        function showNextImage() {
+            images[index].style.display = 'none'; // Hide current image
+            index = (index + 1) % images.length; // Move to the next image
+            images[index].style.display = 'block'; // Show next image
+        }
+
+        // Initialize the carousel by hiding all images except the first
+        for (let i = 1; i < images.length; i++) {
+            images[i].style.display = 'none';
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+</body>
+</html> 

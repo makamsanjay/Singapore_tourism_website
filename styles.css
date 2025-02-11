@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #f0f4c3, #b2ebf2);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4CAF50;
+    padding: 10px 20px;
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Change display to flex for better alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Position relative for the underline effect */
+}
+
+nav ul li a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold; /* Make navbar items bold */
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px;
+    width: 0; /* Start with no width */
+    background-color: #FFC107; /* Underline color */
+    transition: width 0.3s ease; /* Animate width on hover */
+}
+
+nav ul li a:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline width to full on hover */
+}
+
+.intro, .tech-development {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro .content-container, .tech-development {
+    display: flex;
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 90%;
+    height: auto; /* Adjust height to auto for responsiveness */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.text-container {
+    margin-left: 20px;
+}
+
+h1, h2 {
+    color: #4CAF50;
+}
+
+.gallery {
+    text-align: center;
+    margin: 20px;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 50%; /* Set width to half of the page */
+    margin: 0 auto; /* Center the gallery */
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 100%;
+    display: none; /* Initially hide all images */
+    border-radius: 5px;
+}
+
+.carousel-images img:first-child {
+    display: block; /* Show the first image initially */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.validator-logos img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

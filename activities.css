@@ -1,0 +1,187 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4c3, #b2ebf2); /* Lighter gradient background */
+    color: #333;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #4CAF50; /* Dark teal */
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Change display to flex for better alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Position relative for the underline effect */
+}
+
+nav ul li a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold; /* Make navbar items bold */
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline below the text */
+    height: 2px;
+    width: 0; /* Start with no width */
+    background-color: #FFC107; /* Underline color */
+    transition: width 0.3s ease; /* Animate width on hover */
+}
+
+nav ul li a:hover {
+    color: black; /* Change text color to black on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline width to full on hover */
+}
+
+/* Main content styles */
+main {
+    padding: 40px;
+}
+
+/* Activity Section */
+.activity {
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    border-bottom: 2px solid #e0e0e0; /* Light grey border */
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.image-left {
+    flex: 1;
+    position: relative; /* To allow absolute positioning for hover */
+}
+
+.image-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.text-right {
+    flex: 1.5;
+    padding-left: 40px;
+}
+
+.text-right h1 {
+    color: #4CAF50; /* Dark teal */
+    font-size: 24px;
+    margin: 0 0 10px; /* Spacing below title */
+}
+
+.text-right p {
+    font-size: 18px;
+    color: #555; /* Darker grey for text */
+    line-height: 1.6;
+}
+
+/* Gallery styles */
+.gallery {
+    text-align: center; /* Centered gallery */
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%; /* Width of carousel */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel img {
+    width: 100%; /* Responsive width */
+    height: auto;
+    margin: 0 5px; /* Space between images */
+    border-radius: 8px; /* Rounded corners */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.validator-logos img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Image references section */
+.image-references {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff; /* White text for better contrast */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .activity {
+        flex-direction: column; /* Stack image and text on small screens */
+        padding: 20px;
+    }
+
+    .text-right {
+        padding-left: 0; /* Remove left padding on small screens */
+        padding-top: 20px; /* Add space above the text */
+    }
+}
+
+:root {
+    --fa-animation-delay: 0s; /* Default animation delay */
+    --fa-rotate-angle: 0deg;   /* Default rotate angle */
+}
+
+.fa-beat {
+    animation-delay: var(--fa-animation-delay, 0s);
+}
+
+.fa-flip {
+    transform: rotate(var(--fa-rotate-angle, 0deg));
+}
+
